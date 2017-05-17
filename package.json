@@ -1,0 +1,32 @@
+{
+  "name": "fifa_api",
+  "version": "1.0.0",
+  "description": "API for Fifa teams",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kr1stjan/fifaAPI.git"
+  },
+  "keywords": [
+    "FIFA",
+    "API"
+  ],
+  "author": "Kristjan Jürisoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kr1stjan/fifaAPI/issues"
+  },
+  "homepage": "https://github.com/Kr1stjan/fifaAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
