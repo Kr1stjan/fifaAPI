@@ -2,6 +2,8 @@
 This API is going to provide updated data of teams for developers to create fun applications or just develop something for personal use. Teams are fetched from online and stored in MongoDB.
 
 ## Usage
+For the app to work properly, MongoDB needs to be installed locally or an external mongo service used. Insert url into config/db.js.
+
 ```bash
 
 # Install dependencies listed in package.json
