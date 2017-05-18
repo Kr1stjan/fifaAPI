@@ -22,8 +22,8 @@ module.exports = function(app, db) {
         query.overallRating = { $gt :  minRating, $lt : maxRating};
 
         //logger.info("Search query: " + JSON.stringify(query)); Doesn't work because of regex
-        Team.find(query, function(err, filterdTeams) {
-            res.json({filterdTeams});
+        Team.find(query, {_id: 0, __v: 0 }, function(err, filteredTeams) {
+            res.json({filteredTeams});
         });
   });
 

@@ -2,15 +2,14 @@
 This API is going to provide updated data of teams for developers to create fun applications or just develop something for personal use. Teams are fetched from online and stored in MongoDB.
 
 ## Usage
-For the app to work properly, MongoDB needs to be installed locally or an external mongo service used. Insert url into config/db.js.
-
+For the app to work properly, MongoDB needs to be installed locally or an external mongo service used. Insert url into config/db.js. To populate the database call out GET /scrape route of the app.
 ```bash
 
 # Install dependencies listed in package.json
 $ npm install
 
-# Run dev 
-$ npm run dev
+# Run
+$ node server.js
 
 ```
 # API
@@ -38,7 +37,7 @@ $ npm run dev
     
 * **Success Response:**
   * **Code:** 200 <br />
-    **Content:** `{"name": "Bristol City","league": "FL Championship","overallRating": 70}`
+    **Content:** `{"filterdTeams": [{"name": "Bristol City","league": "FL Championship","overallRating": 70}]}`
 * **Error Response:**
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
