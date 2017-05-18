@@ -11,6 +11,78 @@ $ npm install
 $ npm run dev
 
 ```
-#### TODO
-* Get teams from online
-* Move MongoDB to local
+# API
+----
+
+| Route        | HTTP Verb           | Description  |
+| ------------- |:-------------:| :-----|
+| /teams      | GET | Get teams based on name, league, min rating or max rating |
+| /teams      | POST      |   Post a team to database |
+
+***Get Teams***
+----
+  Gets teams from the database
+* **URL**
+  /teams
+* **Method:**
+  `GET`
+*  **URL Params**
+   **Optional:**
+    `name=[string]`
+    `league=[string]`
+    `min_rating=[integer]`
+    `max_rating=[integer]`
+* **Data Params**
+    
+* **Success Response:**
+  * **Code:** 200 <br />
+    **Content:** `{"name": "Bristol City","league": "FL Championship","overallRating": 70}`
+* **Error Response:**
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+* **Sample Call:**
+
+  ```javascript
+    $.ajax({
+      url: "/teams",
+      dataType: "json",
+      type : "GET",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```
+
+**Add Team**
+----
+  Adds a single team to the database
+* **URL**
+  /teams
+* **Method:**
+  `POST`
+*  **URL Params**
+   None
+* **Data Params**
+  `name=[string]`
+  `league=[string]`
+  `rating=[integer]`
+* **Success Response:**
+  * **Code:** 200 <br />
+    **Content:** `{ message : "Team created!" }`
+* **Error Response:**
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+* **Sample Call:**
+
+  ```javascript
+  var team = { "name": "Manchester United", "league": "Barclays PL", "rating": 83 };
+    $.ajax({
+      url: "/teams",
+      data: JSON.stringify(team),
+      dataType: "json",
+      type : "POST",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+  ```

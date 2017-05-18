@@ -23,8 +23,12 @@
   "homepage": "https://github.com/Kr1stjan/fifaAPI#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "cheerio-req": "^1.1.4",
     "express": "^4.15.2",
-    "mongodb": "^2.2.26"
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.9",
+    "scrape-it": "^3.3.2",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
