@@ -1,6 +1,7 @@
 const express        = require('express');
 const bodyParser     = require('body-parser');
 const db             = require('./config/db');
+const scheduler      = require('./config/scheduler');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
  */
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
- 
+
 mongoose.connect(db.url, options);
 var conn = mongoose.connection;             
  

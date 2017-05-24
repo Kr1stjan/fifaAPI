@@ -27,6 +27,7 @@
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.9",
+    "node-schedule": "^1.2.3",
     "scrape-it": "^3.3.2",
     "winston": "^2.3.1"
   },
