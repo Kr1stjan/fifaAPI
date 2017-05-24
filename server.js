@@ -30,13 +30,3 @@ conn.once('open', function() {
         console.log('Listening on port ' + port);
     });                    
 });
-
-/*
-mongoose.connect(db.url, (err, database) => {
-  if (err) return console.log(err)
-  require('./app/routes')(app, database);
-  app.listen(port, () => {
-    console.log('Listening on port ' + port);
-  });               
-})
-*/
