@@ -1,4 +1,4 @@
 node_modules/
-config/db.js
+config/env.json
 exceptions.log
 debug.log
