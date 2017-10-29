@@ -3,6 +3,7 @@ const bodyParser     = require('body-parser');
 const config         = require('./config/env.json')[process.env.NODE_ENV || 'development'];
 const scheduler      = require('./config/scheduler');
 const mongoose       = require('mongoose');
+const cors           = require('cors');
 mongoose.Promise     = require('bluebird');
 
 const app            = express();
@@ -10,6 +11,7 @@ const app            = express();
 const port = config.PORT;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 var options = config.PORT.MONGO_OPTIONS;
 

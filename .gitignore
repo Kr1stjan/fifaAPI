@@ -1,4 +1,4 @@
 node_modules/
-config/env.json
 exceptions.log
 debug.log
+config/env.json
